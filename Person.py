@@ -230,7 +230,7 @@ class Person:
             self.clearDialogue()
             self.checkPrompts()
             self.game.playSound("Select.wav")
-            if option == "Oh, good luck!. (Done)":
+            if option == "Oh, good luck! (Done)":
                 self.game.interviewCandidate(2)
             elif "leet" in self.keywords and "merge-sort" in self.keywords and "quick-sort" in self.keywords and "bits" in self.keywords:
                 self.game.interviewCandidate(4)
@@ -296,12 +296,12 @@ class Person:
                 self.game.playSound("Select.wav")
                 self.score += 1
             else:
-                self.game.text += [f"That's...an interesting description to apply to a human? Anyways, moving on..."]
+                self.game.text += [f"That's...an interesting description to apply to a human? Moving on..."]
                 self.game.playSound("Wrong.wav")
                 self.score -= 1
         if self.interviewQuestion == 3:
             self.game.playSound("Speech.wav")
-            self.game.text += [f"Now, let's get a bit more technical. What's the {W['fastest']} way to {W['sort']} a {W['list']}?"]
+            self.game.text += [f"Now, let's get more technical. What's the {W['fastest']} way to {W['sort']} a {W['list']}?"]
             self.jargon()
         if self.interviewQuestion == 3.5:
             if option.lower() == W["quick-sort"].lower():

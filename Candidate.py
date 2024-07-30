@@ -91,7 +91,7 @@ class Candidate(Person):
                 elif index == 0:
                     g.text += ["Awesome, I feel a lot better now!"]
                 elif index == 1:
-                    g.text += ["Really? I could have sworn that was the answer... I just know I'm going to fail this interview!"]
+                    g.text += ["Really? I could have sworn that was it... I just know I'm going to fail this interview!"]
 
 # Pompous ###############################################################################################
             
@@ -118,7 +118,7 @@ class Candidate(Person):
         if self.id == 2:
             if self.state == 0:
                 g.text += ["Sorry, but I don't have time to talk now. They're going to call my name any minute!"]
-                g.options += ["Oh, good luck!. (Done)"]
+                g.options += ["Oh, good luck! (Done)"]
 
 # Judgemental ###########################################################################################
             
