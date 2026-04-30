@@ -345,9 +345,9 @@ class Game:
         elif name in self.images:
             return self.images[name]
         if exe:
-            path = os.path.join(os.path.dirname(sys.executable), 'images')
+            path = os.path.join(os.path.dirname(sys.executable), 'Images')
         else:
-            path = os.path.join(os.path.dirname(__file__), 'images')
+            path = os.path.join(os.path.dirname(__file__), 'Images')
         if number==0:
             img = pygame.image.load(os.path.join(path, name))
             img = pygame.transform.scale(img, (int(SCALE*scale*img.get_width()),int(SCALE*scale*img.get_height())))
@@ -363,9 +363,9 @@ class Game:
     def playMusic(self, name):
         ''' Plays the given background track '''
         if exe:
-            path = os.path.join(os.path.dirname(sys.executable), 'audio')
+            path = os.path.join(os.path.dirname(sys.executable), 'Audio')
         else:
-            path = os.path.join(os.path.dirname(__file__), 'audio')
+            path = os.path.join(os.path.dirname(__file__), 'Audio')
         pygame.mixer.music.load(os.path.join(path, name))
         pygame.mixer.music.play(-1)
         
@@ -375,9 +375,9 @@ class Game:
             self.sounds[name].play()
             return
         if exe:
-            path = os.path.join(os.path.dirname(sys.executable), 'audio')
+            path = os.path.join(os.path.dirname(sys.executable), 'Audio')
         else:
-            path = os.path.join(os.path.dirname(__file__), 'audio')
+            path = os.path.join(os.path.dirname(__file__), 'Audio')
         sound = pygame.mixer.Sound(os.path.join(path, name))
         self.sounds[name] = sound
         sound.play()
